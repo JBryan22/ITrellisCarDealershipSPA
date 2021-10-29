@@ -11,7 +11,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { CarService } from './services/car.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     FormsModule,
     MatCardModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule
   ],
   providers: [CarService],
   bootstrap: [AppComponent]

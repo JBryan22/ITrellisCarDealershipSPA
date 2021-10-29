@@ -1,5 +1,6 @@
 export class CarQuery {
     color: string = null;
+    price: number = null;
     hasSunroof: boolean = null;
     isFourWheelDrive: boolean = null;
     hasLowMiles: boolean = null;

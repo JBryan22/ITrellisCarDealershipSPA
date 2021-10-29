@@ -12,6 +12,11 @@
           <mat-option value="Black">Black</mat-option>
         </mat-select>
       </mat-form-field>
+
+      <mat-form-field class="car-form-field" appearance="fill">
+        <mat-label>Price</mat-label>
+        <input matInput [(ngModel)]="carQuery.price" type="number">        
+      </mat-form-field>
       
       <mat-form-field class="car-form-field" appearance="fill">
         <mat-label>Sunroof</mat-label>
@@ -75,9 +80,11 @@
       <mat-card-title>{{car.make}}</mat-card-title>
       <mat-card-subtitle>{{car.year}}</mat-card-subtitle>
       <mat-card-content>
+        <p>Color: {{car.color}}</p>
+        <p>Price: ${{car.price}}</p>
+        <p>Miles: {{car.miles}}</p>
         <p *ngIf="car.hasSunroof">Sunroof Included</p>
         <p *ngIf="car.isFourWheelDrive">Four Wheel Drive Included</p>
-        <p *ngIf="car.hasLowMiles">Low Miles</p>
         <p *ngIf="car.hasPowerWindows">Power Windows Included</p>
         <p *ngIf="car.hasNavigation">Navigation Included</p>
         <p *ngIf="car.hasHeatedSeats">Heated Seats Included</p>
